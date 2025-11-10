@@ -1,0 +1,29 @@
+# Model files (too large for GitHub, use download script instead)
+models/*.onnx
+models/*.engine
+
+# Build artifacts
+build/
+*.o
+*.a
+*.so
+*.exe
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Temporary files
+*.tmp
+*.log
