@@ -1,0 +1,18 @@
+# MobileClip TensorRT Classifier Configuration
+
+# Model paths
+model:
+  root: "models"
+  image_encoder: "image_encoder.onnx"
+  text_encoder: "text_encoder.onnx"
+  vocab: "vocab.json"
+  merges: "merges.txt"
+
+# Classification settings
+classification:
+  image_path: "images/traffic_light.jpg"
+  text_labels:
+    - "the red light is on"
+    - "the yellow light is on"
+    - "the green light is on"
+    - "no light is on"
