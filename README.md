@@ -6,8 +6,6 @@ A C++ implementation of MobileClip image classification using TensorRT for high-
 
 - TensorRT 10.x engine optimization with FP16 support
 - Batch processing capability for both image and text encoders
-- Standard C++ project structure (1 .hpp ↔ 1 .cpp)
-- Zero-copy GPU inference with CUDA streams
 - BPE tokenizer for text preprocessing
 - Helper scripts for model download and ONNX export
 
