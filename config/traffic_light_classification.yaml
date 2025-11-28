@@ -1,0 +1,28 @@
+# MobileClip TensorRT Classifier Configuration - 红绿灯分类
+
+# Model paths
+model:
+  root: "models"
+  image_encoder: "image_encoder.onnx"
+  text_encoder: "text_encoder.onnx"
+  vocab: "vocab.json"
+  merges: "merges.txt"
+
+# Classification settings
+classification:
+  # 数据集路径
+  dataset_path: "/home/liming/datasets/cropped_traffic_light"
+  # 输出路径
+  output_path: "/home/liming/outputs/traffic_light"
+  # 文本提示词
+  text_labels:
+    - "the red light is on"
+    - "the yellow light is on"
+    - "the green light is on"
+    - "no light is on"
+  # 类别名称（用于保存结果）
+  class_names:
+    - "RED"
+    - "YELLOW"
+    - "GREEN"
+    - "OFF"

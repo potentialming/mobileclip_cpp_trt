@@ -10,9 +10,13 @@ model:
 
 # Classification settings
 classification:
-  image_path: "images/traffic_light.jpg"
+  image_path: "images/cat.jpg"
   text_labels:
-    - "the red light is on"
-    - "the yellow light is on"
-    - "the green light is on"
-    - "no light is on"
+    - "a cat"
+    - "a dog"
+    - "a bird"
+    - "a car"
+    - "a person"
+    - "a flower"
+    - "a tree"
+    - "food"

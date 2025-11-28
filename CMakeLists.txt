@@ -17,9 +17,8 @@ link_directories(/usr/lib/x86_64-linux-gnu)
 # Include directories
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
-# Source files
-set(SOURCES
-    src/main.cpp
+# Common source files (exclude main.cpp and batch_main.cpp)
+set(COMMON_SOURCES
     src/classifier.cpp
     src/logger.cpp
     src/image_preprocess.cpp
@@ -29,11 +28,30 @@ set(SOURCES
     src/tokenizer.cpp
 )
 
-# Create executable
-add_executable(classifier ${SOURCES})
+# Single image classifier
+add_executable(classifier 
+    src/main.cpp
+    ${COMMON_SOURCES}
+)
 
-# Link libraries
+# Batch traffic light classifier
+add_executable(batch_traffic_light_classifier 
+    src/batch_main.cpp
+    ${COMMON_SOURCES}
+)
+
+# Link libraries for single classifier
 target_link_libraries(classifier PRIVATE 
+    ${OpenCV_LIBS}
+    ${CUDA_LIBRARIES}
+    nvinfer
+    nvinfer_plugin
+    nvonnxparser
+    cudart
+)
+
+# Link libraries for batch classifier
+target_link_libraries(batch_traffic_light_classifier PRIVATE 
     ${OpenCV_LIBS}
     ${CUDA_LIBRARIES}
     nvinfer

@@ -27,3 +27,4 @@ Makefile
 # Temporary files
 *.tmp
 *.log
+outputs/

@@ -25,12 +25,12 @@ Config parse_config(const std::string& config_path) {
     config.text_encoder_onnx = "text_encoder.onnx";
     config.vocab_json = "vocab.json";
     config.merges_txt = "merges.txt";
-    config.test_image = "images/traffic_light.jpg";
+    config.test_image = "images/cat.jpg";
     config.text_labels = {
-        "the red light is on",
-        "the yellow light is on",
-        "the green light is on",
-        "no light is on"
+        "a cat",
+        "a dog",
+        "a bird",
+        "a car"
     };
     
     std::cout << "Config loaded from: " << config_path << std::endl;
